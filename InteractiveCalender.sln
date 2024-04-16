@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractiveCalender", "InteractiveCalender.csproj", "{04284B7B-FB04-4D92-A15E-1EE21E7C05DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04284B7B-FB04-4D92-A15E-1EE21E7C05DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04284B7B-FB04-4D92-A15E-1EE21E7C05DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04284B7B-FB04-4D92-A15E-1EE21E7C05DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04284B7B-FB04-4D92-A15E-1EE21E7C05DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7A8F2F1F-5D24-475B-91D3-28C098D653FB}
+	EndGlobalSection
+EndGlobal

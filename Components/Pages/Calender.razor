@@ -1,0 +1,66 @@
+﻿@page "/Calender"
+@rendermode InteractiveServer
+
+<h3>Calender</h3>
+
+<div class="container">
+    <p>@daysInMonth</p>
+    <p>@firstDay</p>
+
+    <table>
+        <thead>
+        <tr>
+            <th class="p-2">Monday</th>
+            <th class="p-2">Tuesday</th>
+            <th class="p-2">Wednesday</th>
+            <th class="p-2">Thursday</th>
+            <th class="p-2">Friday</th>
+            <th class="p-2">Saturday</th>
+            <th class="p-2">Sunday</th>
+        </tr>
+        </thead>
+        <tbody>
+        @for (int i = 1; i <= daysInMonth + firstDay -1; i++)
+        {
+            if (i % 7 == 1)
+
+            {
+                @:<tr>
+            }
+
+            if(i >= firstDay )
+            {
+               <td class="p-2">@numberOfADay(i)</td>
+            }
+            
+            if(i < firstDay )
+            {
+                @:<td class="p-2">x</td>
+            }
+
+            if (i % 7 == 1)
+            {
+                @:</tr>
+            }
+        }
+        </tbody>
+    </table>
+</div>
+
+@code {
+    readonly static DateTime firstDayOfMonth = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+    DateTime startDate = firstDayOfMonth.AddDays(-(int)firstDayOfMonth.DayOfWeek);
+    int daysInMonth = DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month);
+
+    int firstDay =  (int)firstDayOfMonth.DayOfWeek;
+
+    int daysInPreviousMonth = DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month - 1);
+
+    int daysInNextMonth = DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month + 1);
+
+    private int numberOfADay(int day)
+    {
+        return day - firstDay + 1;
+    }
+
+}
